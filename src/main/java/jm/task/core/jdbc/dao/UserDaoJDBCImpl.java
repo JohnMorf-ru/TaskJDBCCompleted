@@ -10,18 +10,6 @@ import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
 
-    private final static String createTableSQL = "create table users_table"
-            + "(user_id int auto_increment,"
-            + "name varchar(20) not null,"
-            + "lastName varchar(20) not null,"
-            + "age int not null,"
-            + "primary key (user_id))";
-    private final static String dropTableSQL = "drop table users_table";
-    private final static String insertUserSQL = "insert into users_table (name, lastName, age) VALUES (?, ?, ?)";
-    private final static String getAllUsersSQL = "select * from users_table";
-    private final static String removeByIdSQL = "delete from users_table where user_id = ?";
-    private final static String cleanTableSQL = "delete from users_table";
-
     public UserDaoJDBCImpl() {
     }
 
